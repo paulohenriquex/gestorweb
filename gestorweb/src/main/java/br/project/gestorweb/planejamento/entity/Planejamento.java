@@ -15,12 +15,14 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@EqualsAndHashCode(callSuper = false)
 public class Planejamento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,11 +32,13 @@ public class Planejamento {
 
     @ManyToMany
     @JoinTable(name = "planejamentoReceita", joinColumns = @JoinColumn(name = "planejamentoId"), inverseJoinColumns = @JoinColumn(name = "receitaId"))
+    @EqualsAndHashCode.Exclude // <--- Adicione esta linha
     private List<Receita> receitas;
 
     private int quantitativo;
 
     @ManyToOne
     @JoinColumn(name = "usuarioId")
+    @EqualsAndHashCode.Exclude // <--- Adicione esta linha
     private Usuario usuario;
 }

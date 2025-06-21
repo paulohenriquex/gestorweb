@@ -11,6 +11,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @Data
@@ -18,6 +19,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Table(name = "produtos")
+@EqualsAndHashCode(callSuper = false)
 public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -40,5 +42,6 @@ public class Produto {
 
     @ManyToOne
     @JoinColumn(name = "usuarioId")
+    @EqualsAndHashCode.Exclude
     private Usuario usuario;
 }

@@ -1,7 +1,7 @@
 package br.project.gestorweb.receita.entity;
 
 import java.util.List;
-
+import lombok.EqualsAndHashCode; // <--- Importe esta anotação!
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import br.project.gestorweb.auth.entity.Usuario;
@@ -24,6 +24,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Table(name = "receitas")
+@EqualsAndHashCode(callSuper = false)
 public class Receita {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -37,9 +38,11 @@ public class Receita {
 
     @OneToMany(mappedBy = "receita", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
+    @EqualsAndHashCode.Exclude
     private List<IngredienteReceita> ingredientes;
 
     @ManyToOne
     @JoinColumn(name = "usuarioId")
+    @EqualsAndHashCode.Exclude
     private Usuario usuario;
 }
