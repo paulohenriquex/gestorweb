@@ -1,5 +1,10 @@
 package br.com.gestorweb.controller;
 
-public class UsuarioController {
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+@RestController
+@RequestMapping
+public class UsuarioController {
+    // TODO
 }

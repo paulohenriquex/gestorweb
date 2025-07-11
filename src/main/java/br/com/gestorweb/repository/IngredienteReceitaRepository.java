@@ -7,5 +7,5 @@ import br.com.gestorweb.model.IngredienteReceita;
 
 @Repository
 public interface IngredienteReceitaRepository extends JpaRepository<IngredienteReceita, Long> {
-
+    // TODO
 }

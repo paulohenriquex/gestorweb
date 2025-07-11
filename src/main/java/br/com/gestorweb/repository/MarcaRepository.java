@@ -7,5 +7,5 @@ import br.com.gestorweb.model.Marca;
 
 @Repository
 public interface MarcaRepository extends JpaRepository<Marca, Long> {
-
+    // TODO
 }

@@ -7,5 +7,5 @@ import br.com.gestorweb.model.Planejamento;
 
 @Repository
 public interface PlanejamentoRepository extends JpaRepository<Planejamento, Long> {
-
+    // TODO
 }
