@@ -7,5 +7,5 @@ import br.com.gestorweb.model.Endereco;
 
 @Repository
 public interface EnderecoRepository extends JpaRepository<Endereco, Long> {
-    // TODO
+
 }

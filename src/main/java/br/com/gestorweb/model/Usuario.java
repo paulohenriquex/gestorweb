@@ -19,7 +19,6 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // TODO arrumar aqui
     private String email;
     private String senha;
     private String role;

@@ -7,5 +7,5 @@ import br.com.gestorweb.model.Categoria;
 
 @Repository
 public interface CategoriaRepository extends JpaRepository<Categoria, Long> {
-    // TODO
+
 }

@@ -23,7 +23,6 @@ public class Planejamento {
 
     private LocalDate data;
 
-    // TODO arrumar aqui
     // private Receita receita;
     private int quantitativo;
 }
