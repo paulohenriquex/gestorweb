@@ -18,7 +18,7 @@ public class ProdutoService {
         return ResponseEntity.ok(produtoRepository.save(produto));
     }
 
-    public ResponseEntity<List<Produto>> findAll() {
-        return ResponseEntity.ok(produtoRepository.findAll());
+    public List<Produto> findByUsuarioId(Long usuarioId) {
+        return produtoRepository.findByUsuarioId(usuarioId);
     }
 }
