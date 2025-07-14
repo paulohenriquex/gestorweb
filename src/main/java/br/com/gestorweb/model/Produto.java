@@ -30,6 +30,10 @@ public class Produto {
     private String medida;
 
     @ManyToOne
+    @JoinColumn(name = "usuario_id")
+    public Usuario usuario;
+
+    @ManyToOne
     @JoinColumn(name = "marca_id")
     private Marca marca;
 
