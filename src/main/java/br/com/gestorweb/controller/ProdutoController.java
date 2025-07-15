@@ -15,7 +15,7 @@ import br.com.gestorweb.model.Usuario;
 import br.com.gestorweb.service.ProdutoService;
 
 @RestController
-@RequestMapping("/produto")
+@RequestMapping("/api/produto")
 public class ProdutoController {
     private final ProdutoService produtoService;
 
