@@ -1,5 +1,6 @@
 package br.com.gestorweb.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -32,7 +33,7 @@ public class Receita {
     private String modoDePreparo;
 
     @OneToMany(mappedBy = "receita", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<IngredienteReceita> ingredientes;
+    private List<IngredienteReceita> ingredientes = new ArrayList<>();;
 
     @ManyToOne
     @JoinColumn(name = "usuario_id")
