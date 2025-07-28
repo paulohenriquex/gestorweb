@@ -35,4 +35,5 @@ public class Endereco {
     @OneToOne(mappedBy = "endereco")
     @JsonIgnore
     private Fornecedor fornecedor;
+
 }
