@@ -32,7 +32,7 @@ public class Fornecedor {
     private String telefone;
     private String email;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "endereco_id")
     private Endereco endereco;
 
