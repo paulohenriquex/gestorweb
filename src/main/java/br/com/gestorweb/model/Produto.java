@@ -1,6 +1,7 @@
 package br.com.gestorweb.model;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -44,8 +45,7 @@ public class Produto {
 
     @ManyToMany
     @JoinTable(name = "produto_fornecedor", joinColumns = @JoinColumn(name = "produto_id"), inverseJoinColumns = @JoinColumn(name = "fornecedor_id"))
-
-    private List<Fornecedor> fornecedores;
+    private List<Fornecedor> fornecedores = new ArrayList<>();;
 
     @ManyToOne
     @JoinColumn(name = "usuario_id")
@@ -54,5 +54,5 @@ public class Produto {
 
     @OneToMany(mappedBy = "produto")
     @JsonIgnore
-    private List<IngredienteReceita> ingredientes;
+    private List<IngredienteReceita> ingredientes = new ArrayList<>();;
 }
