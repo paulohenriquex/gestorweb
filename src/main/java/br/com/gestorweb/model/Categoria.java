@@ -1,5 +1,6 @@
 package br.com.gestorweb.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -29,9 +30,9 @@ public class Categoria {
 
     private String nome;
 
-    @OneToMany(mappedBy = "categoria")
     @JsonIgnore
-    private List<Produto> produtos;
+    @OneToMany(mappedBy = "categoria")
+    private List<Produto> produtos = new ArrayList<>();
 
     @ManyToOne
     @JoinColumn(name = "usuario_id")
