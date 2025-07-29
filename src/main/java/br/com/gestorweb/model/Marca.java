@@ -32,7 +32,7 @@ public class Marca {
 
     @JsonIgnore
     @OneToMany(mappedBy = "marca")
-    private List<Produto> produtos = new ArrayList<>();;
+    private List<Produto> produtos = new ArrayList<>();
 
     @ManyToOne
     @JoinColumn(name = "usuario_id")
